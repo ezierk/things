@@ -1,0 +1,17 @@
+(
+b.free;
+b = Buffer.read(s, "/Users/evanzierk/Desktop/01 Bloom Strings.wav"
+
+
+
+
+);
+{
+    var pointer = Phasor.ar(1, SampleDur.ir / BufDur.ir(b) * XLine.kr(1, 0.1, 300));
+	var sound = Warp1.ar(1, b, (MouseX.kr(0.0,1.0,0,0.2)), 0.5, (MouseY.kr(0.01,0.8,0,0.2)), -1, 0.9, Line.kr(0.3, 1.0, 40), 4);
+
+
+	Out.ar(2,Pan2.ar(sound, pointer * 2 - 1, 0.25));
+}.play
+)
+b.free;
